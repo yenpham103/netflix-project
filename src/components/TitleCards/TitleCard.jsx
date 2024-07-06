@@ -12,7 +12,7 @@ function TitleCard({ title, category }) {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: "Bearer 29e55c93dd01d5a10f402a476d94bf99",
+      Authorization: `Bearer ${import.meta.env.VITE_ACCESS_TOKEN_TITLE}`,
     },
   };
 
@@ -39,7 +39,7 @@ function TitleCard({ title, category }) {
     <div className="title-cards">
       <h2>{title ? title : "Popular on Netflix"}</h2>
       <div className="card-list" ref={cardsRef}>
-        {apiData.map((card, index) => {
+        {apiData?.map((card, index) => {
           return (
             <Link to={`/player/${card.id}`} className="card" key={index}>
               <img
