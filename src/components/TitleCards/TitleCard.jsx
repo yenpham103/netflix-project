@@ -6,12 +6,13 @@ import { Link } from "react-router-dom";
 function TitleCard({ title, category }) {
   const [apiData, setApiData] = useState([]);
   const cardsRef = useRef();
-  //Api
+
+  //Header
   const options = {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${import.meta.env.VITE_ACCESS_TOKEN_TITLE}`,
+      Authorization: "Bearer 29e55c93dd01d5a10f402a476d94bf99",
     },
   };
 

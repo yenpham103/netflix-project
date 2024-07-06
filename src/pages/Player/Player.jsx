@@ -15,7 +15,7 @@ function Player() {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${import.meta.env.VITE_ACCESS_TOKEN_TITLE}`,
+      Authorization: "Bearer 29e55c93dd01d5a10f402a476d94bf99",
     },
   };
   useEffect(() => {
